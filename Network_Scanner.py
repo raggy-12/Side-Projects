@@ -18,11 +18,12 @@ def scan_network(target_ip):
         devices.append({'ip': received.psrc, 'mac': received.hwsrc, 'hostname': hostname})
     return devices
 
-network = "172.20.4.207/24"
+network = "IP" #add your IP
 devices = scan_network(network)
 
 
 print("Found Devices: ")
 for device in devices:
     print(f"IP ADDRESS: {device['ip']}, MAC ADDRESS: {device['mac']} HOSTNAME: {device['hostname']}")
+
 
